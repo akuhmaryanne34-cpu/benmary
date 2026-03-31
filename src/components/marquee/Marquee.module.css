@@ -1,0 +1,107 @@
+/* MAIN CONTAINER */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  padding: 4px 0;
+
+  /* 🔥 brand color */
+  background: #9FE870;
+
+  /* ✨ soft glow */
+  box-shadow: 0 10px 30px rgba(159, 232, 112, 0.15);
+}
+
+/* 🔥 EDGE FADE (premium look) */
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #9FE870, transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #9FE870, transparent);
+}
+
+/* TRACK (MOVES) */
+.track {
+  display: flex;
+  width: max-content;
+
+  animation: scroll 60s linear infinite;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+
+  padding-right: 100px;
+}
+
+/* TEXT */
+.content span {
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  color: #090D06;
+
+  white-space: nowrap;
+
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+/* 🔥 HOVER EFFECT */
+.content span:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ✨ SEPARATOR STYLE */
+.content span::after {
+  content: "";
+}
+
+/* 🔥 SCROLL ANIMATION */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 🖱️ PAUSE ON HOVER */
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+/* 📱 MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .content {
+    gap: 40px;
+  }
+
+  .content span {
+    font-size: 0.85rem;
+  }
+
+  .marquee::before,
+  .marquee::after {
+    width: 60px;
+  }
+}

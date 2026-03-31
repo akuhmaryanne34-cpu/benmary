@@ -1,0 +1,80 @@
+.card {
+  position: relative;
+
+  padding: 32px;
+  border-radius: 18px;
+
+  /* 🔥 GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+/* NUMBER */
+.number {
+  font-size: 0.7rem;
+  color: #9FE870;
+  margin-bottom: 12px;
+  font-family: "Manrope",sans-serif;
+  display: block;
+}
+
+/* TITLE */
+.card h3 {
+  font-size: 1.1rem;
+  font-family: "Manrope",sans-serif;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.card p {
+  color: #bfc5c2;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-family: "Manrope",sans-serif;
+}
+
+/* LINK */
+.link {
+  display: inline-block;
+  margin-top: 20px;
+
+  font-size: 0.85rem;
+  color: #9FE870;
+
+  transition: 0.3s;
+}
+
+/* 🔥 HOVER EFFECT */
+.card:hover {
+  transform: translateY(-10px) scale(1.01);
+
+  border-color: rgba(159, 232, 112, 0.4);
+
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.4),
+    0 0 20px rgba(159, 232, 112, 0.15);
+}
+
+/* LINK ANIMATION */
+.card:hover .link {
+  transform: translateX(6px);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(120deg, transparent, rgba(159,232,112,0.1), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}

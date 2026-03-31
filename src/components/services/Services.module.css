@@ -1,0 +1,39 @@
+.services {
+  padding: 120px 80px;
+}
+
+/* TOP HEADER */
+.top {
+  margin-bottom: 50px;
+}
+
+.tag {
+  color: #9FE870;
+  font-family: "Manrope",sans-serif;
+  font-size: 0.8rem;
+}
+
+.top h2 {
+  margin-top: 10px;
+  font-size: 2rem;
+  font-family: "Manrope",sans-serif;
+  color: white;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .services {
+    padding: 80px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

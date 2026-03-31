@@ -1,0 +1,143 @@
+/* NAV WRAPPER */
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* 🔥 THIS IS THE KEY FIX */
+  width: fit-content;        /* no full width */
+  max-width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 22px 32px !important;        /* smaller height */
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 40px;       /* pill shape */
+
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1rem;
+  font-family: "Orbitron",sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.logo span {
+  color: #9FE870;
+  font-family: "Orbitron",sans-serif;
+}
+
+/* LINKS */
+.links {
+  display: flex;
+  gap: 25px;
+}
+
+.links a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #ccc;
+  position: relative;
+  font-family: "Manrope",sans-serif;
+}
+
+/* hover underline */
+.links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #9FE870;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+/* BUTTON */
+.btn {
+  background: #9FE870;
+  color: #090D06;
+  border: none;
+  padding: 6px 14px !important;
+  border-radius: 20px;
+  font-family: "Manrope",sans-serif;
+  font-size: 0.8rem;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* ANIMATION */
+.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+
+.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+
+    flex-direction: column;
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+
+    padding: 20px;
+    border-radius: 12px;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.3s;
+  }
+
+  .active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  .btn {
+    display: none;
+  }
+}
