@@ -5,6 +5,7 @@ import Marquee from "../components/marquee/Marquee"
 import Services from '../components/services/Services'
 import SelectedWorks from '../components/selectedworks/SelectedWorks'
 import About from '../components/About/About'
+import CTA from '../components/cta/CTA'
 
 
 const Home = () => {
@@ -16,6 +17,8 @@ const Home = () => {
     <Services />
     <SelectedWorks />
     <About />
+    <Marquee />
+    <CTA />
     </div>
   )
 }

@@ -17,13 +17,15 @@ export default function Navbar() {
         <Link to="/" onClick={() => setOpen(false)}>
           Home
         </Link>
-        <a href="#services">Services</a> 
+        <a href="#services">Services</a>
         <Link to="#">Work</Link>
         <a href="#about">About</a>
       </div>
 
       {/* BUTTON */}
-      <button className={styles.btn}>Contact Us</button>
+      <Link to="/contact" className={styles.btn}>
+        Contact Us
+      </Link>
 
       {/* HAMBURGER */}
       <div

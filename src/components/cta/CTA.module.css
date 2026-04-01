@@ -1,0 +1,93 @@
+.cta {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GLASS CARD */
+.card {
+  width: 100%;
+  max-width: 700px;
+  padding: 3rem;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid #9FE870;
+
+  text-align: center;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+  transition: 0.3s ease;
+}
+
+/* HOVER GLOW */
+.card:hover {
+  transform: translateY(-10px) scale(1.01);
+
+  border-color: rgba(159, 232, 112, 0.4);
+
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.4),
+    0 0 20px rgba(159, 232, 112, 0.15);
+}
+/* TEXT */
+.tag {
+  color: #9FE870;
+  font-size: 0.9rem;
+ font-family: "Manrope",sans-serif;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Manrope",sans-serif;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.title span {
+  color: #9FE870;
+  font-family: "Manrope",sans-serif;
+}
+
+.desc {
+  color: #c6c6c6;
+  font-size: 0.95rem;
+  font-family: "Manrope",sans-serif;
+  margin-bottom: 2rem;
+}
+
+/* BUTTON */
+.btn {
+  background: transparent;
+  border: 1px solid rgba(132, 255, 0, 0.4);
+  font-family: "Manrope",sans-serif;
+  color: #fff;
+
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+text-decoration: none;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #9FE870;
+  color: #000;
+  box-shadow: 0 0 15px #9ee87052;
+}
+
+/* NOTE */
+.note {
+  display: block;
+  margin-top: 1rem;
+  font-family: "Manrope",sans-serif;
+  color: #777;
+  font-size: 0.8rem;
+}
