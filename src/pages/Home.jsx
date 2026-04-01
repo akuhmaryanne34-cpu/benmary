@@ -4,6 +4,7 @@ import Hero from '../components/hero/Hero'
 import Marquee from "../components/marquee/Marquee"
 import Services from '../components/services/Services'
 import SelectedWorks from '../components/selectedworks/SelectedWorks'
+import About from '../components/About/About'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     <Marquee />
     <Services />
     <SelectedWorks />
+    <About />
     </div>
   )
 }

@@ -1,0 +1,166 @@
+/* SECTION */
+.works {
+  padding: 5rem 6rem;
+ 
+  color: white;
+}
+
+/* HEADER WRAPPER */
+.header {
+  margin-bottom: 3rem;
+}
+
+/* SMALL LABEL */
+.subtitle {
+  display: flex;
+  font-family: "Manrope",sans-serif;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9FE870; /* your green */
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* GREEN DOT */
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #9FE870;
+  border-radius: 50%;
+}
+
+/* BIG TITLE */
+.title {
+     font-family: "Manrope",sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* CARD (GLASS) */
+.card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid  rgba(159, 232, 112, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(239, 237, 237, 0);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.01);
+
+  border-color: rgba(159, 232, 112, 0.4);
+
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.4),
+    0 0 20px rgba(159, 232, 112, 0.15);
+}
+
+/* IMAGE */
+.imageWrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.content {
+  padding: 1.5rem;
+}
+
+/* TITLE */
+.projectTitle {
+  font-weight: bold;
+   font-family: "Manrope",sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* DESCRIPTION */
+.description {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+   font-family: "Manrope",sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* TECH STACK */
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+   font-family: "Manrope",sans-serif;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+/* TECH PILL (GLASS) */
+.tech {
+  padding: 0.3rem 0.7rem;
+   font-family: "Manrope",sans-serif;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+   background: #9FE870;
+  color: black;
+   font-family: "Manrope",sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.3s ease;
+}
+
+/* 🔥 HOVER BRAND COLOR */
+.button:hover {
+  background: #9FE870;
+  color: #000;
+  border-color: #9FE870;
+}
+
+/* SEE MORE BUTTON */
+.btnWrapper {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.viewMore {
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #9FE870;
+   font-family: "Manrope",sans-serif;
+  color: #090d06;
+  font-weight: 500;
+}
+
+.viewMore:hover {
+  background: #9FE870;
+  color: black;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

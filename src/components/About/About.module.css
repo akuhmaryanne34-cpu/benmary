@@ -1,0 +1,138 @@
+/* src/components/About/About.module.css */
+
+.about {
+  padding: 6rem;
+  color: white;
+}
+
+/* LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* IMAGE */
+/* IMAGE BOX */
+.imageBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* TOP TWO IMAGES */
+.teamImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.teamImages img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+
+  /* GLASS FEEL */
+  border: 1px solid #9ee870b0;
+
+  transition: 0.3s ease;
+}
+
+.teamImages img:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* WORKSPACE IMAGE */
+.workspace img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 20px;
+ border: 1px solid #9ee870b0;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* CONTENT */
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9FE870;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* DOT */
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #9FE870;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-family: "Manrope",sans-serif;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  color: white;
+   font-family: "Manrope",sans-serif;
+}
+
+.desc {
+  color: #cbd5f5;
+  font-size: 0.95rem;
+   font-family: "Manrope",sans-serif;
+   line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* STEPS */
+.steps {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.step {
+  padding: 1rem;
+  border-radius: 12px;
+ border-color: #9FE870;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #9ee870b0;
+
+  transition: 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  border-color: #9FE870;
+}
+
+.step h4 {
+  color: #9FE870;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.step p {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1.5rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
